@@ -5,7 +5,7 @@ In the healthcare field, the treatment of diseases is more effective when detect
 
 The automated methods for DR detection are cost and time saving and are more efficient than a manual diagnosis. A manual diagnosis is prone to misdiagnosis and requires more effort than automatic methods. A trained doctor can only detect with 50% accuracy.
 Retina dataset
-The dataset given to us had 3662 fundus images that were resized to 224x224 and gaussian filtered. Images belonged to 5 classes namely - 
+The dataset given to us had 3662 fundus images that were resized to 224x224 and gaussian filtered. Images belonged to 5 classes namely - <br>
 0 - Negative or No DR: Patient has no disease. <br>
 1 - Mild DR (Stage 1): Patient has mild level of disease. <br>
 2 - Moderate DR (Stage 2): Patient has moderate level of disease. <br>
