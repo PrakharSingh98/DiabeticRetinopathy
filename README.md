@@ -33,7 +33,7 @@ Grid search was used to search for the best set of hyperparameters. Adam optimiz
 Model took around 15 minutes to train on google colab with GPU and 12GB of RAM. Model started with an accuracy of 50% and reached 98% by 30 epochs. 
 Model accuracy Vs #epochs
 
-## Model loss Vs #epochs
+## Model loss Vs epochs
 
 The metrics used for measuring the performance of the model were - 
 
