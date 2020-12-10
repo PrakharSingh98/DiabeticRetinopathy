@@ -11,15 +11,12 @@ The dataset given to us had 3662 fundus images that were resized to 224x224 and 
 2 - Moderate DR (Stage 2): Patient has moderate level of disease.
 3 - Severe DR (Stage 3): Patient has severe level of disease, the most part of the retina is damaged, can lead to complete blindness.
 4 - Proliferative DR (Stage 4): Patient has proliferative levels of disease. The patient’s eye is damaged to an extent where treatment is elusive, about 80 percent of blindness exists.
-Image preprocessing
+## Image preprocessing
 Preprocessing was required to balance the dataset and extract important features. Noise was already filtered by the gaussian filter. Data augmentation techniques were performed when some image classes were imbalanced and to increase the dataset size. Data augmentation techniques include translation, rotation, shearing, flipping and contrast scaling. 
-Before Data Augmentation - 
 
-After Data Augmentation - 
-
-Model Architecture
+## Model Architecture
 Dataset was splitted into training and validation set with an 80:20 split. At first I used the conventional CNN’s to extract features from the fundus image. The accuracy was really bad. CNN’s are faster than NN’s and are able to capture features with respect to surrounding pixels. So I switched to more complex models that have proved their gravity.
-Transfer Learning
+### Transfer Learning
 In this I used the architectures that were predefined and removed the top layer to add my own ‘softmax’ layer that can classify between 5 classes of DR. I tried with VGG19 initially and that gave me an accuracy of 65%. ResNet50 gave a boost in accuracy as it is a 152 layer deep network with skip-connections.
 Dataset was highly imbalanced which was tackled to some extent by data augmentation. Another way of doing it was class weights. Classes that had a very few number of samples were given higher weightage. This ensured that the model was not biased to a single class with largest samples (No DR in our case). 
 The veins in the image are used for detecting DR. They appeared to be hazy and unclear. I used Contrast Limited Adaptive Histogram Equalisation(CLAHE) to improve the contrast in the image. This helps to get a better view of veins in the retina.
@@ -32,17 +29,16 @@ Hyperparameter optimization
 Grid search was used to search for the best set of hyperparameters. Adam optimizer with a learning rate of 0.000001 was found to perform best in terms of accuracy.
 
 
-Model evaluation
+## Model evaluation
 Model took around 15 minutes to train on google colab with GPU and 12GB of RAM. Model started with an accuracy of 50% and reached 98% by 30 epochs. 
 Model accuracy Vs #epochs
 
-Model loss Vs #epochs
+## Model loss Vs #epochs
 
 The metrics used for measuring the performance of the model were - 
 
 
-
-Accuracy
+## Accuracy
 98% on training set and 81% on validation set
 F1-score
 0.65
@@ -50,14 +46,7 @@ Precision
 0.65
 Recall
 0.64
-Confusion Matrix : 
 
 
-Conclusion
+## Conclusion
 Using this model we got promising results with a comparatively small dataset. Accuracy was better than a trained doctor. The model was tested on unseen data to test the generalizability of the model. Our results show that the model has been able to achieve good performance due to the various techniques that we used at every stage of the ML pipeline. This model was deployed using Flask on a local machine.
-
-Deployed model running on localhost : 
-
-
-
-
