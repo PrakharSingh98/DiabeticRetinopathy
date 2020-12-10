@@ -6,11 +6,11 @@ In the healthcare field, the treatment of diseases is more effective when detect
 The automated methods for DR detection are cost and time saving and are more efficient than a manual diagnosis. A manual diagnosis is prone to misdiagnosis and requires more effort than automatic methods. A trained doctor can only detect with 50% accuracy.
 Retina dataset
 The dataset given to us had 3662 fundus images that were resized to 224x224 and gaussian filtered. Images belonged to 5 classes namely - 
-0 - Negative or No DR: Patient has no disease.
-1 - Mild DR (Stage 1): Patient has mild level of disease.
-2 - Moderate DR (Stage 2): Patient has moderate level of disease.
-3 - Severe DR (Stage 3): Patient has severe level of disease, the most part of the retina is damaged, can lead to complete blindness.
-4 - Proliferative DR (Stage 4): Patient has proliferative levels of disease. The patient’s eye is damaged to an extent where treatment is elusive, about 80 percent of blindness exists.
+0 - Negative or No DR: Patient has no disease. <br>
+1 - Mild DR (Stage 1): Patient has mild level of disease. <br>
+2 - Moderate DR (Stage 2): Patient has moderate level of disease. <br>
+3 - Severe DR (Stage 3): Patient has severe level of disease, the most part of the retina is damaged, can lead to complete blindness. <br>
+4 - Proliferative DR (Stage 4): Patient has proliferative levels of disease. The patient’s eye is damaged to an extent where treatment is elusive, about 80 percent of blindness exists. <br>
 ## Image preprocessing
 Preprocessing was required to balance the dataset and extract important features. Noise was already filtered by the gaussian filter. Data augmentation techniques were performed when some image classes were imbalanced and to increase the dataset size. Data augmentation techniques include translation, rotation, shearing, flipping and contrast scaling. 
 
